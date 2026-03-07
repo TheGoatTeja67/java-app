@@ -1,2 +1,150 @@
-# java-app
-console app
+# Sistem Perpustakaan
+
+Aplikasi sederhana untuk mengelola data buku di perpustakaan. Program ini dibuat menggunakan Java dan SQLite sebagai database.
+
+## Fitur
+
+- Tambah buku baru (Fiksi atau Non-Fiksi)
+- Tampilkan semua buku
+- Cari buku berdasarkan judul
+- Update data buku
+- Hapus buku
+
+## Kebutuhan Sistem
+
+- Java Development Kit (JDK) versi 8 atau lebih baru
+- Terminal atau Command Prompt
+
+## Instalasi Java
+
+### Windows
+
+1. Download JDK dari website Oracle atau adoptium.net
+2. Jalankan installer yang sudah didownload
+3. Ikuti petunjuk instalasi (biasanya tinggal Next, Next, Install)
+4. Setelah selesai, buka Command Prompt dan cek instalasi dengan perintah:
+   ```
+   java -version
+   ```
+5. Jika muncul versi Java, berarti instalasi berhasil
+6. Kalau belum muncul atau error, tambahkan Java ke PATH:
+   - Klik kanan "This PC" > Properties > Advanced system settings
+   - Klik "Environment Variables"
+   - Di System variables, cari "Path", klik Edit
+   - Klik New, tambahkan path ke folder bin JDK (contoh: C:\Program Files\Java\jdk-17\bin)
+   - Klik OK semua, tutup Command Prompt dan buka lagi
+
+### Linux
+
+```bash
+sudo apt update
+sudo apt install default-jdk
+java -version
+```
+
+### MacOS
+
+```bash
+brew install openjdk
+java -version
+```
+
+## Struktur Proyek
+
+```
+testoss/
+├── lib/
+│   ├── sqlite-jdbc-3.51.2.0.jar      # Driver database SQLite
+│   └── mysql-connector-j-9.6.0.jar   # Driver database MySQL
+├── src/
+│   ├── database/
+│   │   └── KoneksiDatabase.java      # Koneksi ke database
+│   ├── main/
+│   │   └── MainApp.java              # Program utama
+│   ├── model/
+│   │   ├── Buku.java                 # Class buku
+│   │   ├── BukuFiksi.java            # Class buku fiksi
+│   │   └── BukuNonFiksi.java         # Class buku non-fiksi
+│   └── service/
+│       ├── PerpustakaanService.java  # Interface service
+│       └── PerpustakaanServiceImpl.java  # Implementasi service
+└── perpustakaan.db                   # Database SQLite (otomatis dibuat)
+```
+
+## Cara Menjalankan Program
+
+### 1. Compile Program
+
+Buka terminal/command prompt di folder proyek, lalu jalankan:
+
+**Windows:**
+
+```cmd
+javac -cp "lib/*" -d bin src/database/*.java src/model/*.java src/service/*.java src/main/*.java
+```
+
+**Linux/MacOS:**
+
+```bash
+javac -cp "lib/*" -d bin src/database/*.java src/model/*.java src/service/*.java src/main/*.java
+```
+
+Perintah ini akan membuat folder `bin` dan compile semua file Java ke dalamnya.
+
+### 2. Jalankan Program
+
+Setelah compile berhasil, jalankan program dengan perintah:
+
+**Windows:**
+
+```cmd
+java -cp "bin;lib/*" main.MainApp
+```
+
+**Linux/MacOS:**
+
+```bash
+java -cp "bin:lib/*" main.MainApp
+```
+
+### 3. Cara Pakai
+
+Setelah program jalan, akan muncul menu seperti ini:
+
+```
+===== MENU PERPUSTAKAAN =====
+1 Tambah Buku
+2 Tampilkan Buku
+3 Cari Buku
+4 Update Buku
+5 Hapus Buku
+6 Keluar
+Pilih Menu :
+```
+
+Tinggal ketik angka menu yang diinginkan dan tekan Enter.
+
+## Catatan
+
+- Database `perpustakaan.db` akan dibuat otomatis saat program pertama kali dijalankan
+- Semua data buku tersimpan di database ini
+- Jika ada error saat compile, pastikan semua file .jar di folder lib sudah ada
+- Kalau mau mulai dari awal, hapus file perpustakaan.db
+
+## Troubleshooting
+
+**Error: javac not found**
+
+- Java belum terinstall atau belum masuk ke PATH
+- Cek dengan `java -version` dan `javac -version`
+- Kalau java -version bisa tapi javac tidak, install JDK (bukan JRE)
+
+**Error: ClassNotFoundException**
+
+- Pastikan path ke lib sudah benar saat menjalankan program
+- Cek apakah file .jar ada di folder lib
+
+**Error: Could not find or load main class**
+
+- Pastikan sudah compile dulu sebelum run
+- Cek apakah folder bin sudah terbuat dan ada file .class di dalamnya
