@@ -15,6 +15,40 @@ Aplikasi sederhana untuk mengelola data buku di perpustakaan. Program ini dibuat
 - Java Development Kit (JDK) versi 8 atau lebih baru
 - Terminal atau Command Prompt
 
+## Download Repository
+
+Ada beberapa cara untuk mendapatkan source code proyek ini dari GitHub:
+
+### Cara 1: Download ZIP
+
+1. Buka halaman repository di GitHub
+2. Klik tombol hijau bertuliskan "Code"
+3. Pilih "Download ZIP"
+4. Setelah download selesai, extract file ZIP ke folder yang diinginkan
+5. Buka folder hasil extract, di dalamnya ada semua file proyek
+
+### Cara 2: Clone dengan Git
+
+Kalau sudah install Git, bisa clone repository dengan cara:
+
+```bash
+git clone https://github.com/username/repository-name.git
+cd repository-name
+```
+
+Ganti `username/repository-name` dengan nama user dan repository yang sebenarnya.
+
+### Cara 3: Clone dengan GitHub Desktop
+
+1. Download dan install GitHub Desktop dari desktop.github.com
+2. Buka aplikasi GitHub Desktop
+3. Klik File > Clone Repository
+4. Pilih tab URL, masukkan URL repository
+5. Pilih folder tujuan untuk menyimpan proyek
+6. Klik Clone
+
+Setelah berhasil download dengan salah satu cara di atas, bisa langsung lanjut ke langkah instalasi Java di bawah.
+
 ## Instalasi Java
 
 ### Windows
