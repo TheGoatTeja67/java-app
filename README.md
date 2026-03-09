@@ -9,6 +9,7 @@ Aplikasi sederhana untuk mengelola data buku di perpustakaan. Program ini dibuat
 - Cari buku berdasarkan judul
 - Update data buku
 - Hapus buku
+<<<<<<< HEAD
 - **Antarmuka GUI** (Java Swing) dan Console
 
 ## Demo Program
@@ -18,6 +19,8 @@ Video demo penggunaan aplikasi:
 [![Demo Sistem Perpustakaan](https://img.youtube.com/vi/VIDEO_ID_DISINI/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_DISINI)
 
 Klik gambar di atas untuk menonton video demo program.
+=======
+>>>>>>> 8607eef527fc2152e39386265216071e2389006c
 
 ## Kebutuhan Sistem
 
@@ -103,9 +106,13 @@ testoss/
 │   ├── database/
 │   │   └── KoneksiDatabase.java      # Koneksi ke database
 │   ├── main/
+<<<<<<< HEAD
 │   │   └── MainApp.java              # Program utama (Console)
 │   ├── ui/
 │   │   └── MainGUI.java              # Program utama (GUI)
+=======
+│   │   └── MainApp.java              # Program utama
+>>>>>>> 8607eef527fc2152e39386265216071e2389006c
 │   ├── model/
 │   │   ├── Buku.java                 # Class buku
 │   │   ├── BukuFiksi.java            # Class buku fiksi
@@ -113,14 +120,18 @@ testoss/
 │   └── service/
 │       ├── PerpustakaanService.java  # Interface service
 │       └── PerpustakaanServiceImpl.java  # Implementasi service
+<<<<<<< HEAD
 ├── compile.bat                       # Script compile (Windows)
 ├── run-gui.bat                       # Script jalankan GUI (Windows)
 ├── run-console.bat                   # Script jalankan Console (Windows)
+=======
+>>>>>>> 8607eef527fc2152e39386265216071e2389006c
 └── perpustakaan.db                   # Database SQLite (otomatis dibuat)
 ```
 
 ## Cara Menjalankan Program
 
+<<<<<<< HEAD
 Ada **2 versi** aplikasi yang bisa dijalankan:
 
 1. **Versi GUI** (Tampilan grafis dengan Java Swing) - **Direkomendasikan!**
@@ -139,18 +150,26 @@ Ada **2 versi** aplikasi yang bisa dijalankan:
 ### Cara Manual
 
 #### 1. Compile Program
+=======
+### 1. Compile Program
+>>>>>>> 8607eef527fc2152e39386265216071e2389006c
 
 Buka terminal/command prompt di folder proyek, lalu jalankan:
 
 **Windows:**
 
 ```cmd
+<<<<<<< HEAD
 javac -encoding UTF-8 -cp "lib/*" -d out src/database/*.java src/model/*.java src/service/*.java src/ui/*.java src/main/*.java
+=======
+javac -cp "lib/*" -d bin src/database/*.java src/model/*.java src/service/*.java src/main/*.java
+>>>>>>> 8607eef527fc2152e39386265216071e2389006c
 ```
 
 **Linux/MacOS:**
 
 ```bash
+<<<<<<< HEAD
 javac -encoding UTF-8 -cp "lib/*" -d out src/database/*.java src/model/*.java src/service/*.java src/ui/*.java src/main/*.java
 ```
 
@@ -202,6 +221,30 @@ Aplikasi GUI memiliki fitur:
 ![Screenshot GUI](screenshot-gui.png) _(Tambahkan screenshot jika ada)_
 
 ### Versi Console
+=======
+javac -cp "lib/*" -d bin src/database/*.java src/model/*.java src/service/*.java src/main/*.java
+```
+
+Perintah ini akan membuat folder `bin` dan compile semua file Java ke dalamnya.
+
+### 2. Jalankan Program
+
+Setelah compile berhasil, jalankan program dengan perintah:
+
+**Windows:**
+
+```cmd
+java -cp "bin;lib/*" main.MainApp
+```
+
+**Linux/MacOS:**
+
+```bash
+java -cp "bin:lib/*" main.MainApp
+```
+
+### 3. Cara Pakai
+>>>>>>> 8607eef527fc2152e39386265216071e2389006c
 
 Setelah program jalan, akan muncul menu seperti ini:
 
@@ -241,6 +284,7 @@ Tinggal ketik angka menu yang diinginkan dan tekan Enter.
 **Error: Could not find or load main class**
 
 - Pastikan sudah compile dulu sebelum run
+<<<<<<< HEAD
 - Cek apakah folder out sudah terbuat dan ada file .class di dalamnya
 
 **Error: No suitable driver found for jdbc:sqlite**
@@ -267,3 +311,6 @@ Tinggal ketik angka menu yang diinginkan dan tekan Enter.
 | Mudah dipakai | Klik & isi form           | Ketik angka menu  |
 
 **Rekomendasi:** Gunakan **versi GUI** untuk pengalaman yang lebih baik!
+=======
+- Cek apakah folder bin sudah terbuat dan ada file .class di dalamnya
+>>>>>>> 8607eef527fc2152e39386265216071e2389006c
