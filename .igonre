@@ -1,12 +1,12 @@
 # Gitignore Java Project
 
-tmpclaude-_
+tmpclaude-*
 .vscode
-_.db
-_.log
+*.db
+*.log
 *.tmp
 *.temp
 *.swp
 *.bak
 .env
-.env._
+.env.*
