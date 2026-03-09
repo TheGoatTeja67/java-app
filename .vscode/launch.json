@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "MainApp",
+      "request": "launch",
+      "mainClass": "main.MainApp",
+      "vmArgs": "--enable-native-access=ALL-UNNAMED"
+    }
+  ]
+}
