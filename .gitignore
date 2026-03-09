@@ -1,0 +1,21 @@
+# Java build output
+out/
+*.class
+
+# Local database files
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+
+# Environment files
+.env
+.env.*
+

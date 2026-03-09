@@ -1,4 +1,6 @@
 @echo off
+cd /d "%~dp0"
+
 echo Compiling project...
 javac -encoding UTF-8 -cp "lib/*" -d out src/database/*.java src/model/*.java src/service/*.java src/ui/*.java src/main/*.java
 
